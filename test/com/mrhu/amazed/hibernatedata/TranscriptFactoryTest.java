@@ -9,6 +9,7 @@ public class TranscriptFactoryTest {
 	@Test
 	public void test() {
 		System.out.println(TranscriptFactory.getTranscript("678张"));
+		
 	}
 
 }
