@@ -48,7 +48,7 @@ public class Transcripts {
 		this.userId = userId;
 	}
 	/**
-	 * @param  the Map to set Map
+	 * @param  the Map to set Map 
 	 */
 	public void setMap(Map<String, Double> map) {
 		this.map = map;
