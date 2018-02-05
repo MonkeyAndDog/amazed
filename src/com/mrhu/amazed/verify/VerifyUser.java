@@ -4,6 +4,7 @@ import com.mrhu.amazed.hibernatedata.UserFactory;
 import com.mrhu.amazed.model.User;
 
 public class VerifyUser {
+	
 	//储存从服务器获取过来的对象
 	private static User userFromDatabase;
 	
