@@ -23,7 +23,8 @@ public class UserFactory {
 	
 	static {
 		sessionFactory = HibernateUtil.getSessionFactory();
-		session = sessionFactory.openSession();
+		session = sessionFactory.getCurrentSession();
+//		session = sessionFactory.openSession();
 	}
 	
 	/**
