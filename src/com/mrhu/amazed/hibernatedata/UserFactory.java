@@ -23,7 +23,6 @@ public class UserFactory {
 	
 	static {
 		sessionFactory = HibernateUtil.getSessionFactory();
-		session = sessionFactory.getCurrentSession();
 //		session = sessionFactory.openSession();
 	}
 	
@@ -32,6 +31,7 @@ public class UserFactory {
 	 * @return 得到用户的详细信息用来验证
 	 */
 	public static User getUser(String password) {
+		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(User.class);
 		criteria.add(Restrictions.eq("password", password));

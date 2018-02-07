@@ -19,7 +19,6 @@ public class TranscriptFactory {
 	
 	static {
 		sessionFactory = HibernateUtil.getSessionFactory();
-		session = sessionFactory.getCurrentSession();
 //		session = sessionFactory.openSession();
 	}
 	
@@ -30,6 +29,7 @@ public class TranscriptFactory {
 	 */
 	public static String getTranscript(String userId) {
 		
+		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Transcripts.class);
 		criteria.add(Restrictions.eq("userId", userId));
