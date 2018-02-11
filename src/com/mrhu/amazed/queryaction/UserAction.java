@@ -28,20 +28,12 @@ public class UserAction extends ActionSupport implements RequestAware{
 	}
 
 	@Override
-	public void setRequest(Map<String, Object> arg0) {
-		this.request = arg0;
+	public void setRequest(Map<String, Object> request) {
+		this.request = request;
 	}
-	
-	/**
-	 * @return the user
-	 */
 	public User getUser() {
 		return user;
 	}
-
-	/**
-	 * @param user the user to set 给struts2使用
-	 */
 	public void setUser(User user) {
 		this.user = user;
 	}

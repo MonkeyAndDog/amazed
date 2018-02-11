@@ -21,19 +21,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <h1 class="mui-title">成绩单</h1>
 	</header>
 	
-	<ul class="mui-table-view">
-        <li class="mui-table-view-cell">
-            <a class="mui-navigate-right">
-            <!-- BUG行 -->
-            	无效化行
-            </a>
-        </li>
-        <li class="mui-table-view-cell">
-            <span><s:property value="#request.getTranscript"/></span>
-        </li>
-        <li class="mui-table-view-cell">
-            <span>成绩2：</span>99
-        </li>
-    </ul>
+	<div class="mui-content" id="transcripts">
+	    <ul class="mui-table-view">
+	        <li class="mui-table-view-cell" v-for="(value, key) in map">
+	            <span>{{ key }} --- </span>{{ value }}
+	        </li>
+	    </ul>
+	</div>
+    
+    <script type="text/javascript" src="js/vue.min.js" ></script>
+    <script>
+		mui.ready(
+			initData
+		);
+    	
+    	var vm = new Vue({
+			el:'#transcripts',
+			data:{"map":{}}
+		});
+    	
+    	function initData() {
+    		var response = ${request.getTranscript};
+			vm.$data.map = response.map;
+		}
+    </script>
   </body>
 </html>

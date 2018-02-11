@@ -30,13 +30,12 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     
     <package name="default" extends="struts-default">
-    	<default-action-ref name="index">/index.html</default-action-ref>
     	<action name="index">
     		<result>/index.html</result>
     	</action>
     </package>
     
-    <package name="query" extends="default" namespace="/query">
+    <package name="user" extends="default" namespace="/user">    	
     	<action name="query" class="com.mrhu.amazed.queryaction.UserAction">
     		<result name="success">
     			<param name="location">/result.jsp</param>
@@ -47,4 +46,8 @@
     		<allowed-methods>execute</allowed-methods>
     	</action>
     </package>
+    <package name="query" extends="default" namespace="/query">
+    </package>
+    
+    
 </struts>

@@ -16,7 +16,6 @@ public class Transcripts {
 	private String userId;
 	private String transcript;
 
-
 	public Transcripts() {
 		map = new HashMap<String, Double>();
 	}

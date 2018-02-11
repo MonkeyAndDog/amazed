@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>成绩查询系统</title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
-    <link href="css/frontStyle.css" rel="stylesheet"/>
+    <script src="http://localhost:8080/amazed/js/mui.min.js"></script>
+    <link href="http://localhost:8080/amazed/css/mui.min.css" rel="stylesheet"/>
+    <link href="http://localhost:8080/amazed/css/frontStyle.css" rel="stylesheet"/>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav">
@@ -14,7 +14,7 @@
 	</header>
 	
 	<div class="mui-content">
-	    <form class="mui-input-group" action="http://localhost:8080/amazed/query/query!execute" method="post">
+	    <form class="mui-input-group" action="http://localhost:8080/amazed/user/query!execute" method="post">
 	        <div class="mui-input-row">
 	            <label>用户名：</label>
 	            <input type="text" class="mui-input-clear" placeholder="您的姓名，汉字输入" name="user.username">
